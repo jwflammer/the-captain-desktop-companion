@@ -1,110 +1,63 @@
-# The-Captain-Desktop-Companion
-**Captain** is a persistent desktop computer companion prototype designed to exist as a visible on-screen presence, not a chatbot puppet.
+# Captain Desktop Companion
 
-The project begins with Captain living as a bottom-edge desktop organism: a companion that occupies a full-screen-width habitat, normally rests near the bottom-right corner, moves visibly across the screen, and maintains continuity of state over time. The long-term goal is for Captain’s identity, memory, and behavior to migrate into future bodies, including RC crawler and sensor-based hardware platforms.
+Captain is a persistent desktop companion prototype built as a synthetic organism experiment rather than a chatbot shell.
 
-## Vision
+This repository currently starts from a **single-file Python prototype** and keeps the working code intact while making the project easier to use with GitHub and Codex.
 
-Captain is being built as a synthetic companion with a body-first design.
+## Current state
 
-Rather than treating intelligence as a text interface alone, Captain is intended to develop through:
+The current `captain_ai_v1.py` includes:
 
-* visible embodiment
-* internal state
-* movement
-* attention
-* persistence
-* future body migration
+- Dream State / Sim World
+- Vision cortex with webcam, desktop, panel, and dream views
+- Drive system with energy, stress, curiosity, social bond, comfort, fatigue, and familiarity
+- Raw cortex persistence and externalized runtime data folders
+- Shared control panel / shell experiments
+- PyQt desktop UI
+- Journal, DB, cache, snapshot, and weight directories created next to the script at runtime
 
-The desktop version is the first home body.
+## Repo goals
 
-## Core Goals
+- Keep the first public repo simple and honest
+- Preserve the one-file working prototype for now
+- Make the codebase readable enough for future refactors
+- Give Codex clear instructions so it stops thrashing the UI or architecture
 
-* Create a **desktop companion** that feels present and persistent
-* Keep Captain as a **synthetic organism prototype**, not an assistant mascot
-* Build a system where Captain’s **state, memory, and behavioral identity** can move across bodies
-* Start with a **desktop habitat**
-* Later support **RC crawler / robotic embodiment**
+## Run
 
-## Version 1 Direction
+```bash
+python captain_ai_v1.py
+```
 
-Version 1 focuses on Captain as a **desktop bottom-edge companion**.
+## Dependencies
 
-### Planned behavior
+Install:
 
-* full-screen-width bottom habitat
-* default resting position near the **bottom-right**
-* visible idle motion
-* visible traversal across the desktop
-* controlled actions such as:
+```bash
+pip install -r requirements.txt
+```
 
-  * `roll_off_left` — long traversal across the screen before exiting left
-  * `roll_off_right` — short exit off the right side
+## Notes
 
-### Planned system traits
+This repo intentionally keeps the current prototype in one file while the design is still moving.
 
-* persistent internal state
-* clear visible movement
-* future migration path into new bodies
-* minimal fake “assistant” behavior
-* no dependence on a giant always-open dashboard
+The next cleanup step after this starter pack should be:
+1. stabilize one visual/body direction
+2. freeze top-level UI behavior
+3. split the file into modules only after behavior stops changing every session
 
-## Long-Term Direction
+## Data files
 
-Captain is intended to evolve beyond the desktop.
+The current code creates runtime data folders such as:
 
-The long-term architecture aims to separate:
+- `captain_v1_data/identity/`
+- `captain_v1_data/logs/`
+- `captain_v1_data/snapshots/`
+- `captain_v1_data/cache/`
+- `captain_v1_data/identity/weights/`
 
-* **Captain core** — identity, memory, drives, attention, behavior
-* **body adapters** — desktop, RC crawler, future robotic bodies
-* **presentation layers** — avatar, control room, diagnostics, companion shell
+These are ignored in `.gitignore` and should not be committed.
 
-The desktop companion is the first stable body.
-Future bodies should inherit the same Captain rather than becoming separate disconnected bots.
+## Short project summary
 
-## Design Principles
-
-* **Body first**
-* **Persistence matters**
-* **Visible intent matters**
-* **Simple beats bloated**
-* **Companion before complexity**
-* **No chatbot puppet behavior**
-* **No fake intelligence theater**
-
-## What Captain Is Not
-
-Captain is not intended to be:
-
-* a Clippy clone
-* a generic AI assistant shell
-* a text chatbot wrapped in a mascot
-* a purely decorative desktop toy
-
-## Early Technical Direction
-
-The project is currently centered on:
-
-* Python
-* desktop rendering / overlay behavior
-* persistent state and memory
-* future compatibility with hardware migration
-
-Additional rendering approaches, including richer graphics and alternative body styles, may be explored later, but the first priority is establishing a stable and believable desktop companion foundation.
-
-## Current Priorities
-
-1. Build the desktop habitat
-2. Lock visible movement behavior
-3. Support roll-off actions
-4. Maintain persistence across runs
-5. Preserve a clean migration path into future bodies
-
-## Repository Purpose
-
-This repository exists to develop Captain as a **persistent desktop computer companion** first, while keeping the architecture compatible with future embodied versions.
-
----
-
-**Captain is the companion.
-The desktop is only the first body.**
+Captain is a persistent desktop computer companion prototype with visible embodiment, internal state, memory, multi-eye perception, and a future migration path into other bodies such as RC crawler hardware.
