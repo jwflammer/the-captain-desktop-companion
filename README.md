@@ -108,5 +108,3 @@ This repository exists to develop Captain as a **persistent desktop computer com
 
 **Captain is the companion.
 The desktop is only the first body.**
-
-If you want, I’ll do the repo folder structure next.
